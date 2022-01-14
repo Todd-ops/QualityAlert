@@ -18,23 +18,24 @@
     <table class='table table-striped table-bordered' aria-labelledby="pageTitle" *ngIf="formInfo">
       <thead>
         <tr>
-          <th>Part/Tool#</th>
+          <th>UID</th>
           <th>Description</th>
           <th>Starts</th>
           <th>Ends</th>
-          <th>Type</th>
           <th>Action</th>
   
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let item of formInfo | filter:searchText">
-          <td>{{item.UID}}</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td >{{item.uid}}</td>
+          <td>{{item.defectCat}}</td>
+          <td>{{item.starts | date:'short'}}</td>
+          <td>{{item.ends | date:'short'}}</td>
+          <td><button 
+            (click)="onClick(uid)"
+            class="btn btn-primary">Remove</button></td>
+          
   
         </tr>
       </tbody>

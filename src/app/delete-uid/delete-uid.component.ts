@@ -10,10 +10,10 @@ import { FormInfo } from './formInfo'
 export class DeleteUidComponent implements OnInit {
   @Input() uid: any;
   @Output() sendThis = new EventEmitter()
-  public formInfo: FormInfo[]= [];
+  public formInfo: any;
   public searchText: any;
-
-  constructor(private service: MyDataService) { }
+  
+  constructor(public service: MyDataService) { }
 
   ngOnInit() {
     this.service.getActiveQA()
@@ -24,6 +24,11 @@ export class DeleteUidComponent implements OnInit {
   }
 
   
+
+  // onClick(uid: any){
+  //   this.sendThis.emit(uid)
+  //   console.log('button clicked', uid)
+  // }
 
   onClick(uid: any){
     this.sendThis.emit(uid)

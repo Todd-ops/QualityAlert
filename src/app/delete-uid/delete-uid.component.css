@@ -12,7 +12,7 @@
   
   .search-hero {
     max-width: 500px;
-    padding-bottom: 50px;
+    padding-bottom: 10px;
     margin: auto;
     flex-shrink: 0;
   }

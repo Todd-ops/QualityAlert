@@ -7,7 +7,7 @@ import { MyDataService } from './my-data.service'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Quality Alert Delete';
+  title = 'Remove Quality Alert';
 
   constructor(){}
 
