@@ -9,6 +9,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+
 
 @NgModule({
   declarations: [	
@@ -21,7 +24,9 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     HttpClientModule,
     FormsModule  ,
     NgSelectModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    FontAwesomeModule,
+    SweetAlert2Module
   ],
   providers: [MyDataService],
   bootstrap: [AppComponent]

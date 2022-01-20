@@ -30,3 +30,13 @@
     #load {
         align-content: center;
     }
+
+    .table{
+      text-align: center;
+    }
+
+    /* .btn-primary{
+      popup: 'swal2-show',
+      backdrop: 'swal2-backdrop-show',
+      icon: 'swal2-icon-show'
+    } */

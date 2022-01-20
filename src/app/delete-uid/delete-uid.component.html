@@ -1,47 +1,46 @@
 <div class="container1">
-  
   <div class="row">
     <div class="search-hero">
-      <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Start searching by key words (e.g. Iron, Melt, Grind, etc...) " />
+      <input
+        class="form-control"
+        type="text"
+        name="search"
+        [(ngModel)]="searchText"
+        autocomplete="off"
+        placeholder="&#61442;  Start searching by key words (e.g. Iron, Melt, Grind, etc...) "
+      />
     </div>
-    <!-- <input 
-    type="text" 
-    class="form-control col-2" 
-    placeholder="Type UID"
-    style="margin-right: 20px;"> -->
     
-    <!-- <button 
-    
-    class="btn btn-primary">Delete</button> -->
   </div>
   <div class="container">
-    <table class='table table-striped table-bordered' aria-labelledby="pageTitle" *ngIf="formInfo">
+    <table
+      class="table table-striped table-bordered"
+      aria-labelledby="pageTitle"
+      *ngIf="formInfo">
       <thead>
         <tr>
           <th>UID</th>
+          <th>Part Num</th>
           <th>Description</th>
           <th>Starts</th>
           <th>Ends</th>
           <th>Action</th>
-  
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let item of formInfo | filter:searchText">
-          <td >{{item.uid}}</td>
-          <td>{{item.defectCat}}</td>
-          <td>{{item.starts | date:'short'}}</td>
-          <td>{{item.ends | date:'short'}}</td>
-          <td><button 
-            (click)="onClick(uid)"
-            class="btn btn-primary">Remove</button></td>
-          
-  
+        <tr *ngFor="let item of formInfo | filter: searchText">
+          <td>{{ item.uid }}</td>
+          <td>{{ item.pNum }}</td>
+          <td>{{ item.defectCat }}</td>
+          <td>{{ item.starts | date: "short" }}</td>
+          <td>{{ item.ends | date: "short" }}</td>
+          <td>
+            <button (click)="confirmBox(item.uid)" class="btn btn-primary">
+              Remove
+            </button>
+          </td>
         </tr>
       </tbody>
     </table>
   </div>
-  
- 
-
 </div>
